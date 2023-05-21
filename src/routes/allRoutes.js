@@ -1,13 +1,15 @@
 import { Routes, Route } from 'react-router-dom'
 
 import React from 'react'
-import Standings from '../container/standings'
+import GettingStarted from '../container/gettingStarted'
+import CalulationStanding from '../container/calulationStanding'
 const AllRoutes = () => {
   return (
  
     <div>
       <Routes>
-        <Route path="/" element={<Standings/>}/>
+        <Route path="/" element={<GettingStarted/>}/>
+        <Route path="/cal" element={<CalulationStanding/>}/>
       </Routes>
     </div>
    

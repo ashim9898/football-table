@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
  
-  dataOfTeams: '',
+  dataOfTeams: [],
 }
 
 const dataSlice = createSlice({
