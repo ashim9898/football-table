@@ -110,7 +110,7 @@ const CalculationStanding = () => {
       GF: scoreUpdate[item].GF,
       GA: scoreUpdate[item].GA,
       GD: scoreUpdate[item].GD,
-      form: scoreUpdate[item].form.slice(0,5),
+      form: scoreUpdate[item].form.slice(0),
     })
   }
 
