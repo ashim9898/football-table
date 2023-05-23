@@ -110,7 +110,7 @@ const CalculationStanding = () => {
       GF: scoreUpdate[item].GF,
       GA: scoreUpdate[item].GA,
       GD: scoreUpdate[item].GD,
-      form: scoreUpdate[item].form.slice(0),
+      form: scoreUpdate[item].form.slice(0,5),
     })
   }
 
@@ -130,7 +130,7 @@ const CalculationStanding = () => {
     <div className='table-center'>
     <table>
   <thead>
-    <tr>
+    <tr className='heading-color'>
       <th>Position</th>
       <th>Team</th>
       <th>Played</th>
@@ -158,7 +158,27 @@ const CalculationStanding = () => {
         <td>{item.GA}</td>
         <td>{item.GD}</td>
         <td>{item.points}</td>
-        <td>{item.form}</td>
+        <td>
+          {item.form.split('').map((letter, index) => {
+            let color;
+            switch(letter){
+              case 'W':
+                color= '#52CC7A'
+                break;
+              case 'L':
+                color='red'
+                break;
+              default:
+                color="grey"
+                break;
+            }
+           return <span key={index} className="bubble-letter" style={{backgroundColor: color}}>{letter}</span>
+          })}
+          
+        {/* {item.form.split('').map((letter, index) => (
+          <span key={index} className="bubble-letter">{letter}</span>
+        ))} */}
+      </td>
     </tr>
     )
   })}

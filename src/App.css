@@ -39,4 +39,54 @@
 .table-center{
   display: flex;
   justify-content: center;
+
+}
+.table-size{
+  display: flex;
+  margin-left: 50px;
+}
+.bubble-letter {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+  size: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+.border{
+  border-bottom: 1px solid black;
+}
+.heading-color{
+  margin-left: 60px;
+  color: grey;
+  background-color: #F3F3F3;
+  border-bottom: 1px solid grey;
+}
+tr{
+  border-bottom: 1px solid grey;
+}
+tbody tr:nth-child(1),
+tbody tr:nth-child(4),
+tbody tr:nth-child(5),
+tbody tr:nth-child(17){
+  border-bottom: 2px solid black;
+}
+th{
+  border-bottom: 1px solid grey;
+}
+table{
+  width:95%;
 }
