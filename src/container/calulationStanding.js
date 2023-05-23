@@ -1,6 +1,26 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setScore } from '../redux/reducers/scoreSlice';
+import ChelseaFcLogo from '../teamLogos/Chelsea_fc.png'
+import LeicesterCityLogo from '../teamLogos/leicester_city.png'
+import AstonVillaLogo from '../teamLogos/astonvilla.png'
+import LiverpoolLogo from '../teamLogos/liverpool_fc.png'
+import SpursLogo from '../teamLogos/spurs.png'
+import SouthhamptonLogo from '../teamLogos/southhampton.png'
+import EvertonLogo from '../teamLogos/everton_fc.png'
+import CrystalPalaceLogo from '../teamLogos/crystalpalace_fc.png'
+import WolverhamptonLogo from '../teamLogos/wolverhampton_fc.png'
+import ManchesterCityLogo from '../teamLogos/manchesterCity.png'
+import ArsenalFCLogo from '../teamLogos/arsenal_fc.png'
+import WestHamLogo from '../teamLogos/westham_fc.png'
+import NewcastleUnitedLogo from '../teamLogos/newcastle.png'
+import LeedsUnitedLogo from '../teamLogos/leeds_united_fc.png'
+import ManchesterUnitedLogo from '../teamLogos/manu.png'
+import BrightonLogo from '../teamLogos/brighton.png'
+import FulhamLogo from '../teamLogos/fulham.png'
+import WestBromLogo from '../teamLogos/westbrom.png'
+import Burnley from '../teamLogos/burnley.png'
+import ShieffieldFcLogo from '../teamLogos/sheffield.png'
 import "../App.css"
 
 const CalculationStanding = () => {
@@ -9,6 +29,7 @@ const CalculationStanding = () => {
   console.log(scoreUpdate)
 
   const dispatch = useDispatch();
+
 
   useEffect(() => {
     const teamState = {};
@@ -97,6 +118,30 @@ const CalculationStanding = () => {
     dispatch(setScore(teamState));
   }, [dataOfTeams]);
 
+  const teamLogos = {
+    'Chelsea FC': ChelseaFcLogo,
+    'Leicester City FC':LeicesterCityLogo,
+    'Tottenham Hotspur FC':SpursLogo,
+    'Liverpool FC':LiverpoolLogo,
+    'Southampton FC':SouthhamptonLogo,
+    'Aston Villa FC':AstonVillaLogo,
+    'Everton FC':EvertonLogo,
+    'Wolverhampton Wanderers FC':WolverhamptonLogo,
+    'Crystal Palace FC':CrystalPalaceLogo,
+    'Manchester City FC':ManchesterCityLogo,
+    'Arsenal FC':ArsenalFCLogo,
+    'West Ham United FC':WestHamLogo,
+    'Newcastle United FC': NewcastleUnitedLogo,
+    'Leeds United FC':LeedsUnitedLogo,
+    'Manchester United FC':ManchesterUnitedLogo,
+    'Brighton & Hove Albion FC':BrightonLogo,
+    'Fulham FC':FulhamLogo,
+    'West Bromwich Albion FC':WestBromLogo,
+    'Burnley FC':Burnley,
+    'Sheffield United FC':ShieffieldFcLogo,
+
+  }
+
   const resultArray = [];
   for (let item in scoreUpdate) {
     
@@ -132,7 +177,7 @@ const CalculationStanding = () => {
   <thead>
     <tr className='heading-color'>
       <th>Position</th>
-      <th>Team</th>
+      <th className='start'>Team</th>
       <th>Played</th>
       <th>Won</th>
       <th>Drawn</th>
@@ -149,7 +194,15 @@ const CalculationStanding = () => {
     return(
     <tr key={id}>
         <td>{id+1}</td>
-        <td>{item.teamName}</td>
+
+        <td className='start' style={{display:"flex", alignItems:'center'}}>
+          <img src={teamLogos[item.teamName]} alt={item.teamName} className='team-logo'/>
+
+          {item.teamName}
+          </td>
+
+
+
         <td>{item.matchPlayed}</td>
         <td>{item.won}</td>
         <td>{item.drawn}</td>

@@ -89,4 +89,20 @@ th{
 }
 table{
   width:95%;
+
+}
+.start{
+  text-align: left;
+}
+.aligning{
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
+
+
+.team-logo{
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
 }
