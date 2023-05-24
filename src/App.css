@@ -82,10 +82,10 @@ tbody tr:nth-child(1),
 tbody tr:nth-child(4),
 tbody tr:nth-child(5),
 tbody tr:nth-child(17){
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #9e9d9d;
 }
 th{
-  border-bottom: 1px solid grey;
+  border-bottom: 0px solid #ccc;
 }
 table{
   width:95%;
