@@ -2790,8 +2790,7 @@ const GettingStarted = () => {
           <div className='col'>
             <h1>English Premier League</h1>
             <br/>
-            <p>lorem mcusnushncdhcus cuscshcshc ajduadhaudh
-              dudshsuhdushudsusdhushdh dnsdshdus
+            <p>The Premier League is the top tier of England's football pyramid, with 20 teams battling it out for the honour of being crowned English champions.
             </p>
             <button type="Button" onClick={handleButtonClick}>Standings</button>
           </div>
