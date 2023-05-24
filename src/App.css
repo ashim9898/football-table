@@ -99,10 +99,28 @@ table{
   align-items: center;
   background-color: red;
 }
-
-
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+}
+.logo, .name, .last-matches {
+  flex: 2;
+  text-align: center;
+}
 .team-logo{
   margin-right: 10px;
   width: 30px;
   height: 30px;
+}
+.teampage{
+  width: 100px;
+  height: 100px;
+}
+.below{
+  white-space: pre-wrap;
 }

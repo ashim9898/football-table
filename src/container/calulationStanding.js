@@ -22,6 +22,7 @@ import WestBromLogo from '../teamLogos/westbrom.png'
 import Burnley from '../teamLogos/burnley.png'
 import ShieffieldFcLogo from '../teamLogos/sheffield.png'
 import "../App.css"
+import { Link } from 'react-router-dom';
 
 const CalculationStanding = () => {
   const { dataOfTeams } = useSelector(state => state.data);
@@ -29,6 +30,10 @@ const CalculationStanding = () => {
   console.log(scoreUpdate)
 
   const dispatch = useDispatch();
+
+  
+
+
 
 
   useEffect(() => {
@@ -191,26 +196,25 @@ const CalculationStanding = () => {
   </thead>
   <tbody>
   {sortedArray.map((item,id)=>{
-    return(
-    <tr key={id}>
-        <td>{id+1}</td>
+    const position = id + 1; // Add 1 to offset the index
+    return (
+      <tr key={id}>
+        <td>{position}</td>
+    
 
         <td className='start' style={{display:"flex", alignItems:'center'}}>
           <img src={teamLogos[item.teamName]} alt={item.teamName} className='team-logo'/>
 
-          {item.teamName}
+          <Link to={{ pathname: `/team/${id}`}}>{item.teamName}</Link>
           </td>
-
-
-
-        <td>{item.matchPlayed}</td>
-        <td>{item.won}</td>
-        <td>{item.drawn}</td>
-        <td>{item.lost}</td>
-        <td>{item.GF}</td>
-        <td>{item.GA}</td>
-        <td>{item.GD}</td>
-        <td>{item.points}</td>
+            <td>{item.matchPlayed}</td>
+            <td>{item.won}</td>
+            <td>{item.drawn}</td>
+            <td>{item.lost}</td>
+            <td>{item.GF}</td>
+            <td>{item.GA}</td>
+            <td>{item.GD}</td>
+            <td>{item.points}</td>
         <td>
           {item.form.split('').map((letter, index) => {
             let color;
