@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setScore } from '../redux/reducers/scoreSlice';
 import ChelseaFcLogo from '../teamLogos/Chelsea_fc.png'
@@ -174,6 +174,24 @@ const CalculationStanding = () => {
       return b.points - a.points;
     }
   });
+
+
+  // State to manage the visibility of the popup and selected team
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedTeam, setSelectedTeam] = useState(null);
+
+  // Function to handle the click event on team name
+  const handleTeamClick = (team) => {
+    setSelectedTeam(team);
+    setShowPopup(true);
+  };
+
+  // Function to close the popup
+  const closePopup = () => {
+    setShowPopup(false);
+    setSelectedTeam(null);
+  };
+
   
 
   return (
@@ -202,11 +220,13 @@ const CalculationStanding = () => {
         <td>{position}</td>
     
 
-        <td className='start' style={{display:"flex", alignItems:'center'}}>
-          <img src={teamLogos[item.teamName]} alt={item.teamName} className='team-logo'/>
-
-          <Link to={{ pathname: `/team/${id}`}}>{item.teamName}</Link>
-          </td>
+        <td className='start' style={{ display: "flex", alignItems: 'center' }}>
+                <img src={teamLogos[item.teamName]} alt={item.teamName} className='team-logo' />
+                {/* Add onClick event handler to the team name */}
+                <span onClick={() => handleTeamClick(item)} className='team-name'>
+                  {item.teamName}
+                </span>
+              </td>
             <td>{item.matchPlayed}</td>
             <td>{item.won}</td>
             <td>{item.drawn}</td>
@@ -241,6 +261,75 @@ const CalculationStanding = () => {
   })}
    
   </tbody>
+{/* Popup */}
+{showPopup && selectedTeam && (
+        <div className="popup">
+          <div className="popup-content">
+            {/* Display the selected team information */}
+            <img src={teamLogos[selectedTeam.teamName]} alt={selectedTeam.teamName} style={{height:"80px",width:'80px'}} className='team-logo' />
+            <h2>{selectedTeam.teamName}</h2>
+            <div className="team-details">
+              <div className="detail-item">
+                <span>Played:</span>
+                <span>{selectedTeam.matchPlayed}</span>
+              </div>
+              <div className="detail-item">
+                <span>Won:</span>
+                <span>{selectedTeam.won}</span>
+              </div>
+              <div className="detail-item">
+                <span>Drawn:</span>
+                <span>{selectedTeam.drawn}</span>
+              </div>
+              <div className="detail-item">
+                <span>Lost:</span>
+                <span>{selectedTeam.lost}</span>
+              </div>
+              <div className="detail-item">
+                <span>GF:</span>
+                <span>{selectedTeam.GF}</span>
+              </div>
+              <div className="detail-item">
+                <span>GA:</span>
+                <span>{selectedTeam.GA}</span>
+              </div>
+              <div className="detail-item">
+                <span>GD:</span>
+                <span>{selectedTeam.GD}</span>
+              </div>
+              <div className="detail-item">
+                <span>Points:</span>
+                <span>{selectedTeam.points}</span>
+              </div>
+              
+              <h3>Form In Last 5 Games</h3>
+              <div className="detail-item">
+              
+              
+              {selectedTeam.form.split('').map((letter, index) => {
+            let color;
+            switch(letter){
+              case 'W':
+                color= '#52CC7A'
+                break;
+              case 'L':
+                color='red'
+                break;
+              default:
+                color="grey"
+                break;
+            }
+            <br/>
+           return <span key={index} className="bubble-letter" style={{backgroundColor: color}}>{letter}</span>
+          })}
+             </div>
+              {/* ... other team details */}
+            </div>
+            <button onClick={closePopup}>Close</button>
+          </div>
+        </div>
+      )}
+       
 </table>
     </div>
   );
