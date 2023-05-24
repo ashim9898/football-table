@@ -195,8 +195,11 @@ const CalculationStanding = () => {
   
 
   return (
+    
     <div className='table-center'>
+      
     <table>
+      
   <thead>
     <tr className='heading-color'>
       <th>Position</th>
@@ -326,7 +329,7 @@ const CalculationStanding = () => {
              </div>
               {/* ... other team details */}
             </div>
-            <button onClick={closePopup} style={{backgroundColor:"#2196f3"}}>Close</button>
+            <button onClick={closePopup} style={{backgroundColor:"#2196f3", color:"white"}}>Close</button>
           </div>
         </div>
       )}
