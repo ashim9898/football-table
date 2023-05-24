@@ -138,6 +138,7 @@ table{
 }
 
 .popup-content {
+  width: 300px;
   background-color: #fff;
   padding: 20px;
   border-radius: 4px;
@@ -170,4 +171,18 @@ button {
 
 button:hover {
   background-color: #0d8bf0;
+}
+.bubble-popup {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 10px 10px; /* Adjust the padding as needed */
+  margin-right: 5px; /* Adjust the margin as needed */
+  size: 20px;
+  
 }

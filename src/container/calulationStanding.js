@@ -11,7 +11,7 @@ import EvertonLogo from '../teamLogos/everton_fc.png'
 import CrystalPalaceLogo from '../teamLogos/crystalpalace_fc.png'
 import WolverhamptonLogo from '../teamLogos/wolverhampton_fc.png'
 import ManchesterCityLogo from '../teamLogos/manchesterCity.png'
-import ArsenalFCLogo from '../teamLogos/arsenal_fc.png'
+import ArsenalFcLogo from '../teamLogos/arsenal_fc.png'
 import WestHamLogo from '../teamLogos/westham_fc.png'
 import NewcastleUnitedLogo from '../teamLogos/newcastle.png'
 import LeedsUnitedLogo from '../teamLogos/leeds_united_fc.png'
@@ -134,7 +134,7 @@ const CalculationStanding = () => {
     'Wolverhampton Wanderers FC':WolverhamptonLogo,
     'Crystal Palace FC':CrystalPalaceLogo,
     'Manchester City FC':ManchesterCityLogo,
-    'Arsenal FC':ArsenalFCLogo,
+    'Arsenal':ArsenalFcLogo,
     'West Ham United FC':WestHamLogo,
     'Newcastle United FC': NewcastleUnitedLogo,
     'Leeds United FC':LeedsUnitedLogo,
@@ -240,7 +240,7 @@ const CalculationStanding = () => {
             let color;
             switch(letter){
               case 'W':
-                color= '#52CC7A'
+                color= '#1dcf32'
                 break;
               case 'L':
                 color='red'
@@ -249,7 +249,7 @@ const CalculationStanding = () => {
                 color="grey"
                 break;
             }
-           return <span key={index} className="bubble-letter" style={{backgroundColor: color}}>{letter}</span>
+           return <span key={index} className="bubble-letter" style={{backgroundColor: color, color:"white"}}>{letter}</span>
           })}
           
         {/* {item.form.split('').map((letter, index) => (
@@ -301,8 +301,9 @@ const CalculationStanding = () => {
                 <span>Points:</span>
                 <span>{selectedTeam.points}</span>
               </div>
-              
+              <br/>
               <h3>Form In Last 5 Games</h3>
+              <br/>
               <div className="detail-item">
               
               
@@ -310,7 +311,7 @@ const CalculationStanding = () => {
             let color;
             switch(letter){
               case 'W':
-                color= '#52CC7A'
+                color= '#1dcf32'
                 break;
               case 'L':
                 color='red'
@@ -320,12 +321,12 @@ const CalculationStanding = () => {
                 break;
             }
             <br/>
-           return <span key={index} className="bubble-letter" style={{backgroundColor: color}}>{letter}</span>
+           return <span key={index} className="bubble-popup" style={{backgroundColor: color, color:"white", justifyContent:"start"}}>{letter}</span>
           })}
              </div>
               {/* ... other team details */}
             </div>
-            <button onClick={closePopup}>Close</button>
+            <button onClick={closePopup} style={{backgroundColor:"#2196f3"}}>Close</button>
           </div>
         </div>
       )}

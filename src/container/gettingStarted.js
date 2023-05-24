@@ -2,10 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setData } from '../redux/reducers/dataSlice';
 import { useEffect } from 'react';
-
+import logo from "../images/logo.png";
+import "../Start.css"
+import { useNavigate } from 'react-router-dom';
 const GettingStarted = () => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate()
   const data = {
     
     "name": "Premier League 2020/21",
@@ -26,7 +28,7 @@ const GettingStarted = () => {
         "round": "Matchday 1",
         "date": "2020-09-12",
         "team1": "Fulham FC",
-        "team2": "Arsenal FC",
+        "team2": "Arsenal",
         "score": {
           "ft": [
             0,
@@ -157,7 +159,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 2",
         "date": "2020-09-19",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "West Ham United FC",
         "score": {
           "ft": [
@@ -350,7 +352,7 @@ const GettingStarted = () => {
         "round": "Matchday 3",
         "date": "2020-09-28",
         "team1": "Liverpool FC",
-        "team2": "Arsenal FC",
+        "team2": "Arsenal",
         "score": {
           "ft": [
             3,
@@ -433,7 +435,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 4",
         "date": "2020-10-04",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Sheffield United FC",
         "score": {
           "ft": [
@@ -506,7 +508,7 @@ const GettingStarted = () => {
         "round": "Matchday 5",
         "date": "2020-10-17",
         "team1": "Manchester City FC",
-        "team2": "Arsenal FC",
+        "team2": "Arsenal",
         "score": {
           "ft": [
             1,
@@ -685,7 +687,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 6",
         "date": "2020-10-25",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Leicester City FC",
         "score": {
           "ft": [
@@ -794,7 +796,7 @@ const GettingStarted = () => {
         "round": "Matchday 7",
         "date": "2020-11-01",
         "team1": "Manchester United FC",
-        "team2": "Arsenal FC",
+        "team2": "Arsenal",
         "score": {
           "ft": [
             0,
@@ -949,7 +951,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 8",
         "date": "2020-11-08",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Aston Villa FC",
         "score": {
           "ft": [
@@ -1004,7 +1006,7 @@ const GettingStarted = () => {
         "round": "Matchday 9",
         "date": "2020-11-22",
         "team1": "Leeds United FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 9",
@@ -1027,7 +1029,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 10",
         "date": "2020-11-28",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Wolverhampton Wanderers FC"
       },
       {
@@ -1130,7 +1132,7 @@ const GettingStarted = () => {
         "round": "Matchday 11",
         "date": "2020-12-05",
         "team1": "Tottenham Hotspur FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 11",
@@ -1147,7 +1149,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 12",
         "date": "2020-12-12",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Burnley FC"
       },
       {
@@ -1207,7 +1209,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 13",
         "date": "2020-12-15",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Southampton FC"
       },
       {
@@ -1292,7 +1294,7 @@ const GettingStarted = () => {
         "round": "Matchday 14",
         "date": "2020-12-19",
         "team1": "Everton FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 14",
@@ -1327,7 +1329,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 15",
         "date": "2020-12-26",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Chelsea FC"
       },
       {
@@ -1388,7 +1390,7 @@ const GettingStarted = () => {
         "round": "Matchday 16",
         "date": "2020-12-28",
         "team1": "Brighton & Hove Albion FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 16",
@@ -1502,12 +1504,12 @@ const GettingStarted = () => {
         "round": "Matchday 17",
         "date": "2021-01-02",
         "team1": "West Bromwich Albion FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 18",
         "date": "2021-01-12",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Crystal Palace FC"
       },
       {
@@ -1567,7 +1569,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 19",
         "date": "2021-01-16",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Newcastle United FC"
       },
       {
@@ -1670,7 +1672,7 @@ const GettingStarted = () => {
         "round": "Matchday 20",
         "date": "2021-01-27",
         "team1": "Southampton FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 20",
@@ -1687,7 +1689,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 21",
         "date": "2021-01-30",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Manchester United FC"
       },
       {
@@ -1778,7 +1780,7 @@ const GettingStarted = () => {
         "round": "Matchday 22",
         "date": "2021-02-02",
         "team1": "Wolverhampton Wanderers FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 22",
@@ -1808,7 +1810,7 @@ const GettingStarted = () => {
         "round": "Matchday 23",
         "date": "2021-02-06",
         "team1": "Aston Villa FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 23",
@@ -1867,7 +1869,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 24",
         "date": "2021-02-13",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Leeds United FC"
       },
       {
@@ -1927,7 +1929,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 25",
         "date": "2021-02-20",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Manchester City FC"
       },
       {
@@ -2012,7 +2014,7 @@ const GettingStarted = () => {
         "round": "Matchday 26",
         "date": "2021-02-27",
         "team1": "Leicester City FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 26",
@@ -2060,7 +2062,7 @@ const GettingStarted = () => {
         "round": "Matchday 27",
         "date": "2021-03-06",
         "team1": "Burnley FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 27",
@@ -2107,7 +2109,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 28",
         "date": "2021-03-13",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Tottenham Hotspur FC"
       },
       {
@@ -2222,12 +2224,12 @@ const GettingStarted = () => {
         "round": "Matchday 29",
         "date": "2021-03-20",
         "team1": "West Ham United FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 30",
         "date": "2021-04-03",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Liverpool FC"
       },
       {
@@ -2324,7 +2326,7 @@ const GettingStarted = () => {
         "round": "Matchday 31",
         "date": "2021-04-10",
         "team1": "Sheffield United FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 31",
@@ -2347,7 +2349,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 32",
         "date": "2021-04-17",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Fulham FC"
       },
       {
@@ -2407,7 +2409,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 33",
         "date": "2021-04-24",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Everton FC"
       },
       {
@@ -2504,7 +2506,7 @@ const GettingStarted = () => {
         "round": "Matchday 34",
         "date": "2021-05-01",
         "team1": "Newcastle United FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 34",
@@ -2527,7 +2529,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 35",
         "date": "2021-05-08",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "West Bromwich Albion FC"
       },
       {
@@ -2618,7 +2620,7 @@ const GettingStarted = () => {
         "round": "Matchday 36",
         "date": "2021-05-12",
         "team1": "Chelsea FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 36",
@@ -2666,7 +2668,7 @@ const GettingStarted = () => {
         "round": "Matchday 37",
         "date": "2021-05-15",
         "team1": "Crystal Palace FC",
-        "team2": "Arsenal FC"
+        "team2": "Arsenal"
       },
       {
         "round": "Matchday 37",
@@ -2707,7 +2709,7 @@ const GettingStarted = () => {
       {
         "round": "Matchday 38",
         "date": "2021-05-23",
-        "team1": "Arsenal FC",
+        "team1": "Arsenal",
         "team2": "Brighton & Hove Albion FC"
       },
       {
@@ -2774,9 +2776,41 @@ const GettingStarted = () => {
     dispatch(setData(data));
   },[dispatch])
 
+  const handleButtonClick = () =>{
+    navigate('/cal')
+  }
+
   return (
     <div>
-      Hey
+      <div className='container'>
+        <div class="top">
+          <img src={logo} className='logo' style={{height:"100px", marginTop:"20px"}}/>
+        </div>
+        <div className='row'>
+          <div className='col'>
+            <h1>English Premier League</h1>
+            <br/>
+            <p>lorem mcusnushncdhcus cuscshcshc ajduadhaudh
+              dudshsuhdushudsusdhushdh dnsdshdus
+            </p>
+            <button type="Button" onClick={handleButtonClick}>Standings</button>
+          </div>
+          <div className='col'>
+            <div className='card card1'>
+             
+            </div>
+            <div className='card card2'>
+             
+            </div>
+            <div className='card card3'>
+              
+            </div>
+            <div className='card card4'>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
